@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { API_KEY } from "../secrets";
 import axios from "axios";
@@ -20,8 +20,6 @@ const MovieDetails = () => {
     overview: "",
     genres: [],
   });
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     useGetData(`movie/${movieState}/similar`, setRelatedMovies, "results");
@@ -68,7 +66,9 @@ const MovieDetails = () => {
         <img src={movieInfo.image} alt="" />
       </picture>
       <section id="movieDetail" className="movieDetail-container">
-          <span className="header-arrow " onClick={() => navigate(-1)}>&lt;</span>
+        <Link to="/">
+          <span className="header-arrow ">&lt;</span>
+        </Link>
         <h1 className="movieDetail-title">{movieInfo.title}</h1>
         <span className="movieDetail-score">{movieInfo.vote}</span>
         <p className="movieDetail-description">{movieInfo.overview}</p>

@@ -18,10 +18,23 @@ export const useGetServices = async (API, setState) => {
   const { results } = await data;
   console.log(data);
 
-  if (Object.entries(results).length === 0 || !results.hasOwnProperty("GT"))
+  if (Object.entries(results).length === 0 || !results.hasOwnProperty("GT")) {
+    setState({
+      flatrate: [],
+    });
+    console.log(results.GT);
     return;
+  }
 
-  setState({
-    flatrate: results.GT.flatrate,
-  });
+  if (!results.GT.hasOwnProperty("flatrate")) {
+    setState({
+      flatrate: [],
+    });
+  } else {
+    setState({
+      flatrate: results.GT.flatrate,
+    });
+  }
+
+  console.log(results.GT);
 };
