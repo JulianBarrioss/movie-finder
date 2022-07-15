@@ -1,0 +1,20 @@
+.genericList-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 32px 24px;
+  }
+  
+  .genericList-container .movie-container {
+    display: inline-block;
+    width: 47.5%;
+  }
+  
+  .genericList-container .movie-img {
+    width: 100%;
+  }
+  
+  .inactive {
+    display: none;
+  }

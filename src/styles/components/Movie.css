@@ -1,0 +1,21 @@
+.movie-container {
+    /* background-color: grey; */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.movie-img {
+    border-radius: 8px;
+}
+ .movie-container {
+    display: inline-block;
+    margin: 8px;
+}
+ .movie-container .movie-img {
+    height: 225px;
+    min-height: 225px;
+    max-height: 225px;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+}
