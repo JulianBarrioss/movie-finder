@@ -6,31 +6,27 @@
     --purple-medium-3: #5C218A;
     --purple-dark-1: #3E0F64;
     --purple-dark-2: #2A0646;
-  
+
     --yellow: #EECC75;
     --green: #CAD297;
     --aqua: #B7EAC5;
     --lightBlue: #A2EEE5;
     --darkBlue: #8EA2EA;
     --red: #F09D9D;
-  
+
     --font-family-titles: 'Dosis', sans-serif;
     --font-family-text: 'Red Hat Display', sans-serif;
     --font-weight-title1: 800;
     --font-weight-title2: 700;
     --font-weight-text1: 400;
     --font-weight-text2: 500;
-  }
+}
 
 .header-container {
     padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.header-container h3{
-    margin: 0;
-    padding: 0;
 }
 
 .header-container {
@@ -91,10 +87,10 @@
 
 .inactive {
     display: none;
-  }
+}
 
-  @media (max-width: 710px) {
-    .header-container h3{
+@media (max-width: 710px) {
+    .header-container h2 {
         display: none;
     }
-  }
+}
